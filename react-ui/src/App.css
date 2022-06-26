@@ -1,0 +1,263 @@
+/*
+
+http://colorschemedesigner.com/csd-3.5/
+
+tetrad
+
+main color: #00CC00
+
+*/
+
+a,
+button {
+    cursor: pointer;
+    margin: 1px 1px;
+}
+
+.sticky {
+    position: sticky!important;
+    top: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bottom-margin {
+    margin-bottom: 30px;
+}
+
+.end-of-table {
+    padding: 2px;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-small;
+}
+
+.max-height-800 {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.max-height-600 {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.max-height-400 {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 99;
+    animation: alert_animation 0.5s 1;
+    -webkit-animation: alert_animation 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes alert_animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes alert_animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.borderless {
+    border: 0!important;
+}
+
+.do_not_show {
+    display: none;
+}
+
+.nav_container * {
+    font-size: large;
+}
+
+.nav_container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    grid-template-areas: "toggle home ." "menu menu menu";
+    justify-items: center;
+}
+
+.toggle {
+    grid-area: toggle;
+}
+
+.homeButton {
+    grid-area: home;
+}
+
+.navMenu {
+    grid-area: menu;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.active_nav_button {
+    border-bottom: 3px solid green;
+}
+
+.create_transaction_form,
+.update_transaction_form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.show_create_transaction_button {
+    border-radius: 50%;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px!important;
+    z-index: 1;
+}
+
+.topBarButtons {
+    color: #9d9d9d;
+    background-color: #222222;
+    border: 0;
+}
+
+.topBarButtons:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.topBarNav_revealer_line {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+ul.user_preferences>li {
+    margin: 35px 0px;
+}
+
+.deleter {
+    padding: 10px;
+    border: 1px solid;
+    border-right: 10px solid#222;
+}
+
+div.transaction_record {
+    display: grid;
+    grid-template-areas: 'amount date' 'description description';
+    border: 1px solid;
+    padding: 6px;
+}
+
+div.transaction_record.expense {
+    border-left: 10px solid red;
+}
+
+div.transaction_record.income {
+    border-left: 10px solid green;
+}
+
+div.transaction_record+div.transaction_record,
+div.deleter+div.transaction_record,
+div.transaction_record+div.deleter {
+    border-top: 0;
+}
+
+div.transaction_record>* {
+    padding: 1px 10px;
+    margin: 0;
+}
+
+div.transaction_record button {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+div.transaction_record:hover button {
+    visibility: visible;
+}
+
+div.transaction_record .transaction_amount {
+    grid-area: amount;
+}
+
+div.transaction_record .transaction_description {
+    font-weight: bold;
+    grid-area: description;
+}
+
+div.transaction_record .transaction_date {
+    grid-area: date;
+    text-align: right;
+}
+
+div.transaction_record .transaction_modifiers {
+    grid-area: modifiers;
+    text-align: right;
+}
+
+.btn {
+    margin: 2px;
+    max-width: 150px;
+    width: calc(33% - 4px);
+}
+
+.btn.btn-danger {
+    margin-left: 40px;
+}
